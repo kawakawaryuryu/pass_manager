@@ -1,0 +1,17 @@
+<h1>Register new ID & Password</h1>
+
+<%= form_for(@pass, url: passes_path) do |f| %>
+    <div>
+        <p><%= f.label :Site %></p>
+        <p><%= f.text_field :site %></p>
+    </div>
+    <div>
+        <p><%= f.label :Mail %></p>
+        <p><%= f.text_field :mail %></p>
+    </div>
+    <div>
+        <p><%= f.label :Password %></p>
+        <p><%= f.text_field :pass %></p>
+    </div>
+    <%= f.submit :Add %>
+<% end %>
