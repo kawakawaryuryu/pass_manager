@@ -8,13 +8,13 @@
         <th>Mail Address</th>
         <th>Password</th>
     </tr>
-    <%# %>
+    <% @passes.each do |pass| %>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><%= pass.site %></td>
+        <td><%= pass.mail %></td>
+        <td><%= pass.pass %></td>
         <td><button>Edit</button></td>
         <td><button>Delete</button></td>
     </tr>
-    <%#= end %>
+    <% end %>
 </table>
