@@ -1,6 +1,6 @@
 <h1>Manage ID & Password</h1>
 
-<button type="button" onclick="location.href='/passes/new'">New</button>
+<button type="button" onclick="location.href='/accounts/new'">New</button>
 
 <table>
     <tr>
@@ -8,11 +8,11 @@
         <th>Mail Address</th>
         <th>Password</th>
     </tr>
-    <% @passes.each do |pass| %>
+    <% @accounts.each do |account| %>
     <tr>
-        <td><%= pass.site %></td>
-        <td><%= pass.mail %></td>
-        <td><%= pass.pass %></td>
+        <td><%= account.site %></td>
+        <td><%= account.mail %></td>
+        <td><%= account.pass %></td>
         <td><button>Edit</button></td>
         <td><button>Delete</button></td>
     </tr>
