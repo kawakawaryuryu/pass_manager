@@ -1,2 +1,2 @@
-module PassesHelper
+module AccountsHelper
 end
