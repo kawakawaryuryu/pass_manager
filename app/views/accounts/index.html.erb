@@ -14,7 +14,7 @@
         <td><%= account.mail %></td>
         <td><%= account.pass %></td>
         <td><%= button_to 'Edit', edit_account_path(account), method: :get %></td>
-        <td><button>Delete</button></td>
+        <td><%= button_to 'Delete', account_path(account), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
 </table>
