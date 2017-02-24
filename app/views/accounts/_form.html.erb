@@ -1,0 +1,15 @@
+<%= form_for(@account) do |f| %>
+    <div>
+        <p><%= f.label :Site %></p>
+        <p><%= f.text_field :site %></p>
+    </div>
+    <div>
+        <p><%= f.label :Mail %></p>
+        <p><%= f.text_field :mail %></p>
+    </div>
+    <div>
+        <p><%= f.label :Password %></p>
+        <p><%= f.password_field :pass %></p>
+    </div>
+    <%= f.submit :Add %>
+<% end %>
