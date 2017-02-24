@@ -16,4 +16,19 @@ class AccountsController < ApplicationController
       redirect_to @account
     end
   end
+
+  def edit
+    @account = Account.find(params[:id])
+  end
+
+  def update
+    @account = Account.find(params[:id])
+
+
+    if @account.update(params.require(:account).permit(:site, :mail, :pass))
+      redirect_to accounts_path
+    else
+      redirect_to @account
+    end
+  end
 end
