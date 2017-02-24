@@ -22,3 +22,6 @@
 
 # Ignore gem packages
 /vendor/
+
+# Ignore swp files
+*.swp

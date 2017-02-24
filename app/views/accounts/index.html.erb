@@ -1,0 +1,20 @@
+<h1>Manage ID & Password</h1>
+
+<button type="button" onclick="location.href='/accounts/new'">New</button>
+
+<table>
+    <tr>
+        <th>Site</th>
+        <th>Mail Address</th>
+        <th>Password</th>
+    </tr>
+    <% @accounts.each do |account| %>
+    <tr>
+        <td><%= account.site %></td>
+        <td><%= account.mail %></td>
+        <td><%= account.pass %></td>
+        <td><%= button_to 'Edit', edit_account_path(account), method: :get %></td>
+        <td><%= button_to 'Delete', account_path(account), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
