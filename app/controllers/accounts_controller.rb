@@ -8,7 +8,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.new(params.require(:account).permit(:site, :mail, :pass, :pass_confirmation))
+    @account = Account.new(account_params)
 
     if @account.save
       redirect_to accounts_path
@@ -25,7 +25,7 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
 
 
-    if @account.update(params.require(:account).permit(:site, :mail, :pass))
+    if @account.update(account_params)
       redirect_to accounts_path
     else
       render :edit
@@ -37,5 +37,11 @@ class AccountsController < ApplicationController
     @account.destroy
 
     redirect_to accounts_path
+  end
+
+
+  private
+  def account_params
+    params.require(:account).permit(:site, :mail, :pass, :pass_confirmation)
   end
 end
