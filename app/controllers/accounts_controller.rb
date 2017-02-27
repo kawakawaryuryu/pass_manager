@@ -8,7 +8,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.new(params.require(:account).permit(:site, :mail, :pass))
+    @account = Account.new(params.require(:account).permit(:site, :mail, :pass, :pass_confirmation))
 
     if @account.save
       redirect_to accounts_path
