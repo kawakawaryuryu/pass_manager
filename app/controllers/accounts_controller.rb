@@ -13,7 +13,7 @@ class AccountsController < ApplicationController
     if @account.save
       redirect_to accounts_path
     else
-      redirect_to @account
+      render :new
     end
   end
 
@@ -28,7 +28,7 @@ class AccountsController < ApplicationController
     if @account.update(params.require(:account).permit(:site, :mail, :pass))
       redirect_to accounts_path
     else
-      redirect_to @account
+      render :edit
     end
   end
 
