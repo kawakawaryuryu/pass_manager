@@ -1,8 +1,10 @@
 class AccountsController < ApplicationController
+  # display list
   def index
     @accounts = Account.all
   end
 
+  # create a new account
   def new
     @account = Account.new
   end
@@ -17,6 +19,7 @@ class AccountsController < ApplicationController
     end
   end
 
+  # update an account
   def edit
     @account = Account.find(params[:id])
   end
@@ -32,6 +35,7 @@ class AccountsController < ApplicationController
     end
   end
 
+  # delete an account
   def destroy
     @account = Account.find(params[:id])
     @account.destroy
