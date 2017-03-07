@@ -1,4 +1,14 @@
 <%= form_for(@account) do |f| %>
+    <% if @account.errors.any? %>
+        <div id="error_explanation">
+            <h4><%= pluralize(@account.errors.count, "error") %></h4>
+            <ul>
+                <% @account.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
     <div>
         <p><%= f.label :Site %></p>
         <p><%= f.text_field :site %></p>
