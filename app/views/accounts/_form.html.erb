@@ -1,3 +1,4 @@
+<div class="large-12 columns">
 <%= form_for(@account) do |f| %>
     <% if @account.errors.any? %>
         <div id="error_explanation">
@@ -27,3 +28,4 @@
     </div>
     <%= f.submit button, class: 'success button' %>
 <% end %>
+</div>
