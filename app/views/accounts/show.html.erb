@@ -15,13 +15,15 @@
     </tr>
 </table>
 
-<div class="large-2 columns" id="move-link">
-    <div class="row">
-        <%= link_to 'Edit', edit_account_path(@account), class: 'large-5 columns' %>
-        <div class="large-2 columns"></div>
-        <%= link_to 'Delete', account_path(@account), method: :delete, data: { confirm: 'Are you sure?' }, class: 'large-5 columns' %>
-    </div>
-    <div class="row">
-        <%= link_to 'Back', accounts_path, class: "large-5 columns" %>
+<div class="row">
+    <div class="large-2 columns" id="move-link">
+        <div class="row">
+            <%= link_to 'Edit', edit_account_path(@account), class: 'large-5 columns' %>
+            <div class="large-2 columns"></div>
+            <%= link_to 'Delete', account_path(@account), method: :delete, data: { confirm: 'Are you sure?' }, class: 'large-5 columns' %>
+        </div>
+        <div class="row">
+            <%= link_to 'Back', accounts_path, class: "large-5 columns" %>
+        </div>
     </div>
 </div>
