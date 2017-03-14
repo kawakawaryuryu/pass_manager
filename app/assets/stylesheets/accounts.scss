@@ -1,3 +1,11 @@
 // Place all the styles related to the accounts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'settings';
+
+$error_color:map-get($foundation-palette, "alert");
+
+div#error_explanation > h4 {
+  color: $error_color;
+}

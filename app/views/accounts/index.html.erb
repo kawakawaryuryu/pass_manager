@@ -1,6 +1,10 @@
 <h1>Manage ID & Password</h1>
 
-<button type="button" onclick="location.href='/accounts/new'">New</button>
+<div class="row">
+    <div class="large-1 columns">
+        <%= button_to 'New', new_account_path, method: :get, class: 'button small' %>
+    </div>
+</div>
 
 <table>
     <tr>
@@ -13,8 +17,9 @@
         <td><%= account.site %></td>
         <td><%= account.mail %></td>
         <td><%= account.pass %></td>
-        <td><%= button_to 'Edit', edit_account_path(account), method: :get %></td>
-        <td><%= button_to 'Delete', account_path(account), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', account_path(account), method: :get, class: 'hollow button small' %></td>
+        <td><%= button_to 'Edit', edit_account_path(account), method: :get, class: 'hollow button secondary small' %></td>
+        <td><%= button_to 'Delete', account_path(account), method: :delete, data: { confirm: 'Are you sure?' }, class: 'hollow button alert small' %></td>
     </tr>
     <% end %>
 </table>
